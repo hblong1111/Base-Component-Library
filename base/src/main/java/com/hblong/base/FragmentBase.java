@@ -23,7 +23,6 @@ public abstract class FragmentBase<B extends ViewDataBinding> extends Fragment {
         navigationViewModel = new ViewModelProvider(getActivity()).get(NavigationViewModel.class);
         return binding.getRoot();
     }
-
     protected abstract int getLayoutId();
 
 

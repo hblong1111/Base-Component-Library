@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeNAVFragment">
+
+    <fragment
+        android:id="@+id/homeNAVFragment"
+        android:name="com.example.basecomponentlibrary.HomeNAVFragment"
+        android:label="fragment_home_n_a_v"
+        tools:layout="@layout/fragment_home_n_a_v">
+        <action
+            android:id="@+id/action_homeNAVFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_homeNAVFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeNAVFragment_to_coinFragment"
+            app:destination="@id/coinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinFragment"
+        android:name="com.example.basecomponentlibrary.CoinFragment"
+        android:label="fragment_coin"
+        tools:layout="@layout/fragment_coin">
+        <action
+            android:id="@+id/action_coinFragment_to_homeNAVFragment"
+            app:destination="@id/homeNAVFragment" />
+        <action
+            android:id="@+id/action_coinFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_coinFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.basecomponentlibrary.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment_to_coinFragment"
+            app:destination="@id/coinFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_homeNAVFragment"
+            app:destination="@id/homeNAVFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.basecomponentlibrary.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_moreFragment_to_homeNAVFragment"
+            app:destination="@id/homeNAVFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_coinFragment"
+            app:destination="@id/coinFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+</navigation>

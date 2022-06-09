@@ -16,9 +16,10 @@ public abstract class FragmentNavigationBase<B extends ViewDataBinding> extends 
 
     private NavController navController;
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         createNavigation();
         if (navController != null) {
             navigationViewModel.getIdNavigation().observe(getActivity(), id -> {
@@ -29,9 +30,7 @@ public abstract class FragmentNavigationBase<B extends ViewDataBinding> extends 
                 }
             });
         }
-        return binding.getRoot();
     }
-
 
     private void createNavigation() {
         try {

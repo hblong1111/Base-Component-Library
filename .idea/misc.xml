@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/app/src/main/res/drawable-v24/bg_btn_login.xml" value="0.1355" />
         <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/app/src/main/res/layout/fragment_coin.xml" value="0.213768115942029" />
         <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/app/src/main/res/layout/fragment_home.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/app/src/main/res/layout/fragment_setting.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/app/src/main/res/menu/menu_bottom_nav_home.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/LongHB/AndroidStudioProjects/BaseComponentLibrary/base/src/main/res/layout/activity_test.xml" value="0.18802083333333333" />
       </map>
     </option>
