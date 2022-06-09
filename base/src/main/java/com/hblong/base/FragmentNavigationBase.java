@@ -29,7 +29,7 @@ public abstract class FragmentNavigationBase<B extends ViewDataBinding> extends 
                 }
             });
         }
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return binding.getRoot();
     }
 
 
