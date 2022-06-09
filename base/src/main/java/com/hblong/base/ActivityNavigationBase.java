@@ -22,7 +22,11 @@ public abstract class ActivityNavigationBase<B extends ViewDataBinding> extends 
         createNavigation();
         if (navController != null) {
             navigationViewModel.getIdNavigation().observe(this, id -> {
-                navController.navigate(id);
+                try {
+                    navController.navigate(id);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             });
         }
     }

@@ -21,7 +21,13 @@ public abstract class FragmentNavigationBase<B extends ViewDataBinding> extends 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         createNavigation();
         if (navController != null) {
-            navigationViewModel.getIdNavigation().observe(getActivity(), id -> navController.navigate(id));
+            navigationViewModel.getIdNavigation().observe(getActivity(), id -> {
+                try {
+                    navController.navigate(id);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
         }
         return super.onCreateView(inflater, container, savedInstanceState);
     }
