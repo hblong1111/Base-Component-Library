@@ -20,8 +20,6 @@ public abstract class ActivityBase<B extends ViewDataBinding> extends AppCompatA
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.inflate(getLayoutInflater(), getLayoutId(), null, false);
         setContentView(binding.getRoot());
-
-
         navigationViewModel = new ViewModelProvider(this).get(NavigationViewModel.class);
     }
 

@@ -16,13 +16,19 @@ public abstract class FragmentBase<B extends ViewDataBinding> extends Fragment {
     protected B binding;
     protected NavigationViewModel navigationViewModel;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        navigationViewModel = new ViewModelProvider(getActivity()).get(NavigationViewModel.class);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, getLayoutId(), container, false);
-        navigationViewModel = new ViewModelProvider(getActivity()).get(NavigationViewModel.class);
         return binding.getRoot();
     }
+
     protected abstract int getLayoutId();
 
 
